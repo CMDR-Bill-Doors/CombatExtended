@@ -148,7 +148,7 @@
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ThingDef[defName="ATR_FractalAbomination"]/statBases/ArmorRating_Sharp</xpath>
 					<value>
-						<ArmorRating_Sharp>7</ArmorRating_Sharp>
+						<ArmorRating_Sharp>10</ArmorRating_Sharp>
 					</value>
 				</li>
 
@@ -232,6 +232,8 @@
 						<MeleeCritChance>0.13</MeleeCritChance>
 						<MeleeParryChance>0.18</MeleeParryChance>
 						<SmokeSensitivity>0.05</SmokeSensitivity>
+						<CarryWeight>60</CarryWeight>
+						<CarryBulk>30</CarryBulk>
 					</value>
 				</li>
 
@@ -262,6 +264,8 @@
 						<MeleeCritChance>0.28</MeleeCritChance>
 						<MeleeParryChance>0.09</MeleeParryChance>
 						<SmokeSensitivity>0.05</SmokeSensitivity>
+						<CarryWeight>60</CarryWeight>
+						<CarryBulk>30</CarryBulk>
 					</value>
 				</li>
 
@@ -292,6 +296,8 @@
 						<MeleeCritChance>0.23</MeleeCritChance>
 						<MeleeParryChance>0.1</MeleeParryChance>
 						<SmokeSensitivity>0.05</SmokeSensitivity>
+						<CarryWeight>100</CarryWeight>
+						<CarryBulk>50</CarryBulk>
 					</value>
 				</li>
 
@@ -304,10 +310,10 @@
 								<capacities>
 									<li>Blunt</li>
 								</capacities>
-								<power>6</power>
+								<power>16</power>
 								<cooldownTime>2.12</cooldownTime>
 								<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
-								<armorPenetrationBlunt>2</armorPenetrationBlunt>
+								<armorPenetrationBlunt>6</armorPenetrationBlunt>
 							</li>
 						</tools>
 					</value>
@@ -316,14 +322,21 @@
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ThingDef[defName="ATR_DroneTORT"]/statBases/ArmorRating_Sharp</xpath>
 					<value>
-						<ArmorRating_Sharp>24</ArmorRating_Sharp>
+						<ArmorRating_Sharp>12</ArmorRating_Sharp>
 					</value>
 				</li>
 
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ThingDef[defName="ATR_DroneTORT"]/statBases/ArmorRating_Blunt</xpath>
 					<value>
-						<ArmorRating_Blunt>60</ArmorRating_Blunt>
+						<ArmorRating_Blunt>36</ArmorRating_Blunt>
+					</value>
+				</li>
+
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="ATR_DroneTORT"]/statBases/ArmorRating_Heat</xpath>
+					<value>
+						<ArmorRating_Heat>0</ArmorRating_Heat>
 					</value>
 				</li>
 
@@ -332,24 +345,26 @@
 				<li Class="PatchOperationAdd">
 					<xpath>Defs/ThingDef[defName="ATR_DroneWatchdog"]/statBases</xpath>
 					<value>
-						<MeleeDodgeChance>0.28</MeleeDodgeChance>
-						<MeleeCritChance>0.29</MeleeCritChance>
-						<MeleeParryChance>0.2</MeleeParryChance>
+						<MeleeDodgeChance>0.16</MeleeDodgeChance>
+						<MeleeCritChance>0.21</MeleeCritChance>
+						<MeleeParryChance>0.1</MeleeParryChance>
 						<SmokeSensitivity>0</SmokeSensitivity>
+						<CarryWeight>60</CarryWeight>
+						<CarryBulk>30</CarryBulk>
 					</value>
 				</li>
 
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ThingDef[defName="ATR_DroneWatchdog"]/statBases/ArmorRating_Sharp</xpath>
 					<value>
-						<ArmorRating_Sharp>5</ArmorRating_Sharp>
+						<ArmorRating_Sharp>4</ArmorRating_Sharp>
 					</value>
 				</li>
 
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ThingDef[defName="ATR_DroneWatchdog"]/statBases/ArmorRating_Blunt</xpath>
 					<value>
-						<ArmorRating_Blunt>10</ArmorRating_Blunt>
+						<ArmorRating_Blunt>6</ArmorRating_Blunt>
 					</value>
 				</li>
 
@@ -362,9 +377,17 @@
 								<capacities>
 									<li>Scratch</li>
 								</capacities>
-								<power>15</power>
-								<cooldownTime>1.22</cooldownTime>
+								<power>12</power>
+								<cooldownTime>1.5</cooldownTime>
 								<linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
+								<surpriseAttack>
+									<extraMeleeDamages>
+										<li>
+											<def>Stun</def>
+											<amount>26</amount>
+										</li>
+									</extraMeleeDamages>
+								</surpriseAttack>
 								<armorPenetrationSharp>1</armorPenetrationSharp>
 								<armorPenetrationBlunt>2.475</armorPenetrationBlunt>
 							</li>
@@ -373,9 +396,17 @@
 								<capacities>
 									<li>Scratch</li>
 								</capacities>
-								<power>15</power>
-								<cooldownTime>1.22</cooldownTime>
+								<power>12</power>
+								<cooldownTime>1.5</cooldownTime>
 								<linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
+								<surpriseAttack>
+									<extraMeleeDamages>
+										<li>
+											<def>Stun</def>
+											<amount>26</amount>
+										</li>
+									</extraMeleeDamages>
+								</surpriseAttack>
 								<armorPenetrationSharp>1</armorPenetrationSharp>
 								<armorPenetrationBlunt>2.475</armorPenetrationBlunt>
 							</li>
@@ -383,9 +414,17 @@
 								<capacities>
 									<li>Bite</li>
 								</capacities>
-								<power>27</power>
-								<cooldownTime>2.24</cooldownTime>
+								<power>18</power>
+								<cooldownTime>2.5</cooldownTime>
 								<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+								<surpriseAttack>
+									<extraMeleeDamages>
+										<li>
+											<def>Stun</def>
+											<amount>32</amount>
+										</li>
+									</extraMeleeDamages>
+								</surpriseAttack>
 								<armorPenetrationSharp>3</armorPenetrationSharp>
 								<armorPenetrationBlunt>12.8</armorPenetrationBlunt>
 							</li>
@@ -394,11 +433,11 @@
 								<capacities>
 									<li>Blunt</li>
 								</capacities>
-								<power>7</power>
-								<cooldownTime>2.24</cooldownTime>
+								<power>10</power>
+								<cooldownTime>2.5</cooldownTime>
 								<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+								<armorPenetrationBlunt>4</armorPenetrationBlunt>
 								<chanceFactor>0.2</chanceFactor>
-								<armorPenetrationBlunt>2.5</armorPenetrationBlunt>
 							</li>
 						</tools>
 					</value>
